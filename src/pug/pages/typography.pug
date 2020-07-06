@@ -1,0 +1,85 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Typography';
+	- var h1 = 'Typography';
+
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Main'},
+			{href:'#',name:'Typography'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section
+		.container
+			.row
+				.col-12
+					p
+						a(href='#') Link
+
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+
+					p Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+
+					br
+					br
+					.h2 Additional classes for text
+					p
+						span.code text-left
+						|  text align left
+					p
+						span.code text-center
+						|  text align center
+					p
+						span.code text-right
+						|  text align right
+					p
+						span.code text-justify
+						|  text align across the width
+					p
+						span.code text-uppercase
+						|  text uppercase
+					p
+						span.code text-bold
+						|  text bold
+
+					br
+					br
+					.h2 Headers
+					h1 Header - h1
+					h2 Header - h2
+					h3 Header - h3
+					h4 Header - h4
+					h5 Header - h5
+					h6 Header - h6
+					br
+					p.h1 The class is called h1
+					p.h2 The class is called h2
+					p.h3 The class is called h3
+					p.h4 The class is called h4
+					p.h5 The class is called h5
+					p.h6 The class is called h6
+
+					br
+					br
+					br
+					.h2 Buttons
+					a.btn(href='#') Button
+
+					br
+					br
+					a.btn.btn_border(href='#') Button
+
+					//- br
+					//- br
+					//- div.h2 Иконки
+					//- .type-icon
+					//- 	.type-icon__item
+					//- 		.type-icon__img
+					//- 			+svg('ic-twitter','ic-twitter', '17', '14')
+					//- 		.type-icon__name ic-twitter

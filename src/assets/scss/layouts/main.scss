@@ -1,0 +1,151 @@
+html,
+body{
+	background: #fff;
+	font-family: $font-site;
+	@include font(normal, 300, 16px, 1.5, $color-text);
+	box-sizing:border-box;
+	height:100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+img{
+	max-width: 100%;
+}
+
+a{
+	color: $color-text;
+	text-decoration: underline;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+p{
+	margin: 0 0 10px;
+}
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5
+{
+	line-height: 1.2;
+	color: $color-text;
+}
+
+h1,.h1{
+	font-size: rem(64px);
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+h2,.h2{
+	font-size: rem(38px);
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+h3,.h3{
+	font-size: rem(24px);
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+h4,.h4{
+	font-size: rem(24px);
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+h5,.h5{
+	font-size: rem(18px);
+	margin-bottom: 0;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	max-width: 1920px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+main{
+	flex: 1 1 auto;
+	padding-bottom: 76px;
+	width: 100%;
+	font-size: rem(24px);
+}
+
+.btn,
+input[type="submit"].btn,
+button.btn{
+	display: inline-block;
+	height: rem(60px);
+	min-width: 210px;
+	background: $color-main;
+	border: 2px solid $color-main;
+	@include font(normal, normal, rem(20px), rem(56px), $color-text);
+	text-align: center;
+	text-decoration: none;
+	padding: 0 10px;
+	// box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+	box-shadow: 1.5px 2.598px 4.75px 0.25px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.btn:hover,
+input[type="submit"].btn:hover,
+button.btn:hover{
+	background: $color-main-light;
+	border-color: $color-main-light;
+}
+
+.btn_border,
+input[type="submit"].btn_border,
+button.btn_border{
+	background: transparent;
+	color: $color-main;
+	box-shadow: none;
+	text-shadow: 1.5px 2.598px 4.75px rgba(0, 0, 0, 0.2);
+}
+
+.btn_border:hover,
+input[type="submit"].btn_border:hover,
+button.btn_border:hover{
+	background: $color-main;
+	color: $color-text;
+	text-shadow: none;
+}
+
+.code{
+	background-color: #f7f7f7;
+	border: 1px solid #e1e1e8;
+	color: #d14;
+	padding: 1px 4px;
+	display: inline-block;
+	font-family: monospace, arial;
+	border-radius: 3px;
+}
+
+.text-left{text-align: left !important;}
+.text-center{text-align: center !important;}
+.text-right{text-align: right !important;}
+.text-justify{text-align: justify !important;}
+.text-uppercase{text-transform: uppercase !important;}
+.text-bold {font-weight: 700 !important;}
