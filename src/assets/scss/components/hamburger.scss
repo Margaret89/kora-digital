@@ -1,35 +1,50 @@
-/*-------------- hamburger -----------------*/
+/*----- hamburger -----*/
 .ic-hamburger {
 	display: inline-block;
 	vertical-align: middle;
-	position: relative;
+	width: 44px;
+	height: 44px;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	width: 30px;
-	height: 20px;
 	font-size: 0;
 	text-indent: -9999px;
-	appearance: none;
 	box-shadow: none;
 	border-radius: none;
 	border: none;
+	background: #ddd;
 	cursor: pointer;
-	transition: background 0.3s;
+	position: relative;
+	transition: all 0.2s ease 0s;
 
-	&:focus {
-		outline: none;
+	&::before{
+		content: '';
+		width: 0%;
+		height: 100%;
+		background: $color-main-light;
+		position: absolute;
+		top: 0;
+		left: auto;
+		right: 0;
+		transition: all 0.2s ease 0s;
 	}
+
+	&:hover::before{
+		width: 100%;
+		left: 0;
+	}
+
+	&:focus {outline: none;}
 	
 	span {
 		display: block;
+		width: 21px;
+		height: 4px;
+		background: #000;
+		border-radius: 2px;
 		position: absolute;
-		top: 8px;
-		left: 0;
-		right: 0px;
-		height: 2px;
-		background: #0073b0;
-		border-radius: 0;
+		top: 19px;
+		left: 16px;
 	}
 	
 	 span::before,
@@ -37,20 +52,15 @@
 		content: "";
 		position: absolute;
 		display: block;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background-color: #0073b0;
-		border-radius: 0;
+		right: 0;
+		width: calc(100% + 9px);
+		height: 4px;
+		background-color: #000;
+		border-radius: 2px;
 	}
 	
-	 span::before {
-		top: -8px;
-	}
-	
-	span::after {
-		bottom: -8px;
-	}
+	span::before {top: -9px;}
+	span::after {bottom: -9px;}
 	
 	span::before {transition: top 0.3s ease 0.3s, transform 0.3s ease 0s;}
 	span::after {transition: bottom 0.3s ease 0.3s, transform 0.3s ease 0s;}
@@ -72,14 +82,26 @@
 	&.active span::before {transition: top 0.3s ease 0s, transform 0.3s ease 0.3s;}
 	&.active span::after {transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s;}
 	
-	&:hover span,
-	&:hover span::before,
-	&:hover span::after{
-		background-color: #818181;
-	}
-	
-	&.active:hover span{
-		background-color: transparent;
-	}
+	&:hover{background: $color-main;}
 }
 
+html[dir='rtl']{
+	.ic-hamburger{
+		&::before{
+			left: 0;
+			right: auto;
+		}
+
+		&:hover::before{
+			right: 0;
+		}
+
+		span{left: 7px;}
+
+		span::before,
+		span::after{
+			right: auto;
+			left: 0;
+		}
+	}
+}

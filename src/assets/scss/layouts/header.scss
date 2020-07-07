@@ -1,15 +1,17 @@
 /*----- header -----*/
 .header{
+	width: 100%;
 	background: rgba(255,255,255,0.9);
 	box-shadow: 0px 5px 9.5px 0.5px rgba(0, 0, 0, 0.1);
 	position: fixed;
+	z-index: 1000;
 
 	&__content{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		min-height: 100px;
-		padding: 25px 0;
+		height: 100px;
+		padding: 15px 0;
 	}
 
 	&__logo{
@@ -25,13 +27,14 @@
 	&__phone,
 	&__phone a{
 		@include font(normal, 500, rem(28px), 1.2, $color-text);
-		transition: all 0.3s ease;
+		text-decoration: none;
+		transition: all 0.2s ease;
 	}
 
 	&__phone{margin-right: 38px;}
-	&__phone:hover{color: $color-main;}
+	&__phone a:hover{color: $color-main;}
 
-	.btn-form{margin-right: 26px;}
+	.btn-form{margin-right: 27px;}
 }
 
 .progress-line{
@@ -61,6 +64,38 @@
 		width: 100%;
 		position: relative;
 	}
+
+	&::before{
+		content: '';
+		width: 0%;
+		height: 100%;
+		background: $color-main-light;
+		position: absolute;
+		top: 0;
+		left: auto;
+		right: 0;
+		transition: all 0.2s ease 0s;
+	}
+
+	&:hover::before{
+		width: 100%;
+		left: 0;
+	}
+}
+
+.lang{
+	display: inline-block;
+	vertical-align: middle;
+	width: 44px;
+	height: 44px;
+	@include font(normal, 500, rem(24px), 44px, $color-text);
+	text-transform: uppercase;
+	text-align: center;
+	background: #ddd;
+	position: relative;
+	cursor: pointer;
+
+	&__content{position: relative;}
 
 	&::before{
 		content: '';

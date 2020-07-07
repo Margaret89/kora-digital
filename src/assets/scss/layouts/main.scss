@@ -115,6 +115,8 @@ button.btn:hover{
 	border-color: $color-main-light;
 }
 
+.btn__text{position: relative;}
+
 .btn::before{
 	content: '';
 	width: 0%;
@@ -126,8 +128,6 @@ button.btn:hover{
 	right: 0;
 	transition: all 0.3s ease 0s;
 }
-
-.btn__text{position: relative;}
 
 .btn:hover::before{
 	width: 100%;
