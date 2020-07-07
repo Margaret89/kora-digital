@@ -103,17 +103,35 @@ button.btn{
 	text-align: center;
 	text-decoration: none;
 	padding: 0 10px;
-	// box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
 	box-shadow: 1.5px 2.598px 4.75px 0.25px rgba(0, 0, 0, 0.2);
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
+	position: relative;
 }
 
 .btn:hover,
 input[type="submit"].btn:hover,
 button.btn:hover{
-	background: $color-main-light;
 	border-color: $color-main-light;
+}
+
+.btn::before{
+	content: '';
+	width: 0%;
+	height: 100%;
+	background: $color-main-light;
+	position: absolute;
+	top: 0;
+	left: auto;
+	right: 0;
+	transition: all 0.3s ease 0s;
+}
+
+.btn__text{position: relative;}
+
+.btn:hover::before{
+	width: 100%;
+	left: 0;
 }
 
 .btn_border,
@@ -123,15 +141,18 @@ button.btn_border{
 	color: $color-main;
 	box-shadow: none;
 	text-shadow: 1.5px 2.598px 4.75px rgba(0, 0, 0, 0.2);
+	box-shadow: 1.5px 2.598px 4.75px 0.25px rgba(0, 0, 0, 0.2);
 }
 
 .btn_border:hover,
 input[type="submit"].btn_border:hover,
 button.btn_border:hover{
-	background: $color-main;
+	border-color: $color-main;
 	color: $color-text;
 	text-shadow: none;
 }
+
+.btn_border::before{background: $color-main;}
 
 .code{
 	background-color: #f7f7f7;
@@ -149,3 +170,14 @@ button.btn_border:hover{
 .text-justify{text-align: justify !important;}
 .text-uppercase{text-transform: uppercase !important;}
 .text-bold {font-weight: 700 !important;}
+
+html[dir='rtl']{
+	.btn::before{
+		left: 0;
+		right: auto;
+	}
+
+	.btn:hover::before{
+		right: 0;
+	}
+}

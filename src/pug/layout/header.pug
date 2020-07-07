@@ -1,1 +1,107 @@
-header.header header
+header.header
+	.container
+		.row
+			.col-12
+				.header__content
+					.header__logo
+						img(src="assets/img/logo.svg", alt="Logo")
+
+					.header__info
+						.header__phone
+							a(href="#") +00 000-000-00
+
+						a(href="#").btn-form
+							span.btn-form__content
+								+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+
+						span.ic-hamburger
+							span
+
+	
+	.sidebar
+		.sidebar__top
+			.sidebar__phone
+				a(href="#") +00 000-000-00
+
+			a(href="#").btn-form
+				span.btn-form__content
+					+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+
+			.lang En
+
+			span.ic-hamburger.active
+				span
+
+			-
+				var list=[
+					{
+						title:'Website development',
+						status:'open',
+						submenu:[
+							'Website development',
+							'Development of complex sites',
+							'Portal Development',
+							'Responsive website development',
+						],
+					},
+					{
+						title:'website design',
+						submenu:[
+							'Test1',
+							'Test2',
+							'Test3',
+						]
+					},
+					{
+						title:'UX / UI',
+						submenu:[
+							'Test1',
+							'Test2',
+						]
+					},
+					{
+						title:'Website characterization',
+						submenu:[
+							'Test1',
+							'Test2',
+							'Test3',
+							'Test4',
+						]
+					},
+					{
+						title:'Additional services',
+						submenu:[
+							'Test1',
+						]
+					},
+					{
+						title:'Outsourcing',
+						submenu:[
+							'Test1',
+							'Test2',
+							'Test3',
+						]
+					},
+					{
+						title:'About Us',
+						submenu:[
+							'Test1',
+							'Test2',
+							'Test3',
+						]
+					},
+				]
+
+			.progress-line
+
+			ul.sidebar-menu
+				each item in list
+					li.sidebar-menu__item(class=item.status=='open'?'open':'')= item.title
+						.sidebar-menu__arr
+							+svg('ic-arrow-down','ic-arrow-down', '20', '13')
+
+						if(item.submenu)
+							ul.sidebar-menu__sub
+								each subitem in item.submenu
+									li.sidebar-menu__subitem
+										a(href="#")= subitem
