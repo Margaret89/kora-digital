@@ -1,1 +1,70 @@
-footer.footer footer
+footer.footer
+	.footer-top
+		.container
+			.row
+				.col-12
+					.footer-top__content
+						.footer-top__logo
+							img(src="assets/img/logo.svg", alt="Logo")
+
+						.footer-top__info
+							.footer-social
+								-
+									var list=[
+										{icon:'ic-watchapp', width:'24', height:'24'},
+										{icon:'ic-in', width:'19', height:'19'},
+										{icon:'ic-fb', width:'12', height:'24'},
+										{icon:'ic-be', width:'25', height:'15'},
+										{icon:'ic-drib', width:'24', height:'24'},
+									]
+
+								each item in list
+									a(href="#").footer-social__item
+										+svg(item.icon, item.icon, item.width, item.height)
+
+
+							.footer-top__phone
+								a(href="tel:+0000000000") +00 000-000-00
+
+							a(href="#").btn-form
+								span.btn-form__content
+									+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+							
+	.footer-main
+		.container
+			.row
+				-
+					var list = [
+						'Category- 1',
+						'Category- 2',
+						'Category- 3',
+						'Category- 4',
+						'Category- 5',
+						'Category- 6',
+					]
+
+				-
+					var submenu = [
+						'Link to the section -1',
+						'Link to the section -2',
+						'Link to the section -3',
+						'Link to the section -4',
+					]
+
+				each menu in list
+					.col-2
+						ul.footer-menu
+							li.footer-menu__item
+								.footer-menu__title
+									a(href="#").footer-menu__link= menu
+
+								ul.footer-menu__sub
+									each item in submenu
+										li.footer-menu__subitem
+											a(href="#").footer-menu__sublink= item
+
+	.footer-copyright
+		.container
+			.row
+				.col-12
+					| Copyright©KoraDigital
