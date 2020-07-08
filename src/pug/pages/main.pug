@@ -2,21 +2,26 @@ extends ../layout/main
 
 block variables
 	- var title = 'Content';
-	- 
-		var pagelist = [
-			{href: 'main.html',name:'Main'},
-			{href: 'typography.html',name:'Typography'},
-		];
 
 block content
-	section(style="margin-top: 130px;")
+	section.top-block
 		.container
 			.row
 				.col-12
-					h1 Content
-					ul
-						each page in pagelist
-							li
-								a(href=page.href,)= page.name
+					.top-block__content
+						.top-block__head Lorem ipsum dolor sit amet, consectetur
+
+						.top-block__text Fusce nec purus sit amet magna consequat tristique. Etiam molestie elit quis nisl ultricies, non scelerisque nisi feugiat.
+
+						.top-block__btn
+							a.btn(href='#')
+								span.btn__text Lorem ipsum
+
+							a.btn.btn_border(href='#')
+								span.btn__text Learn more
+
+		
+		.btn-scroll
+
 
 
