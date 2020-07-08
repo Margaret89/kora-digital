@@ -1,10 +1,11 @@
-import {$} from './common';
+import {Swiper} from './common';
 
-$(window).scroll(function(){
-	if($(this).scrollTop()>300){
-		$('.js-move-up').addClass('visible');
-	}else{
-		$('.js-move-up').removeClass('visible');
-	}
-});
-$('.js-move-up').click(function(){$('body,html').animate({scrollTop:0},800);return false;});
+var mySwiper = new Swiper('.js-services-slider', {
+	loop: true,
+	slidesPerView: 5,
+	spaceBetween: 46,
+	navigation: {
+		nextEl: '.js-services-next',
+		prevEl: '.js-services-prev',
+	},
+})

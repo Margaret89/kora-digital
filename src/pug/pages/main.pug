@@ -1,7 +1,7 @@
 extends ../layout/main
 
 block variables
-	- var title = 'Content';
+	- var title = 'Main';
 
 block content
 	section.top-block
@@ -9,7 +9,7 @@ block content
 			.row
 				.col-12
 					.top-block__content
-						.top-block__head Lorem ipsum dolor sit amet, consectetur
+						.top-block__head Lorem ipsum dolor<br>sit amet, consectetur
 
 						.top-block__text Fusce nec purus sit amet magna consequat tristique. Etiam molestie elit quis nisl ultricies, non scelerisque nisi feugiat.
 
@@ -21,7 +21,85 @@ block content
 								span.btn__text Learn more
 
 		
+		img.top-block__triangle.top-block__triangle_left(src="assets/img/triangle-left.png", alt="")
+		img.top-block__triangle.top-block__triangle_right(src="assets/img/triangle-right.png", alt="")
+		
 		.btn-scroll
 
+	section.info-block
+		.container
+			.row
+				.col-12
+					h2 About company
 
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. Cras enim elit, consectetur sed ultricies sit amet, ultrices non enim. Vivamus sed enim eu mi semper molestie sit amet a mi. Suspendisse nunc lacus, iaculis non dui ut, dignissim lacinia elit. Maecenas bibendum nisi vitae nisi egestas vehicula at nec lacus. Nullam gravida sem et mi dictum, at tincidunt ex suscipit. Fusce rhoncus massa odio, vitae sagittis odio ornare sed. Vestibulum at felis mauris. Aenean nec lorem at enim gravida posuere in eget velit. Cras mollis mauris odio, vitae auctor dui tincidunt vitae.
+
+	section.services-slider-wrap.bg-grey
+		.container
+			.row
+				.col-12
+					h2 Our services
+
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. 
+
+					-
+						var list=[
+							{img:'service-slide1.png', title:'UI / UX design', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper.'},
+							{img:'service-slide2.png', title:'Site Characterization', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper.'},
+							{img:'service-slide3.png', title:'website creation', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper.'},
+							{img:'service-slide4.png', title:'Additional services', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper.'},
+							{img:'service-slide5.png', title:'Outsourcing', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper.'},
+						]
+					.services-slider
+						.swiper-container.services-slider__container.js-services-slider
+							.swiper-wrapper
+								each item in list
+									.swiper-slide
+										a(href="#").services-slider__item
+											.services-slider__img
+												img(src='assets/img/'+item.img, alt="")
+
+											.services-slider__title= item.title
+
+											.services-slider__text= item.text
+
+						.swiper-button-prev.js-services-prev
+							+svg('ic-arrow-left','ic-arrow-left', '13', '20')
+
+						.swiper-button-next.js-services-next
+							+svg('ic-arrow-right','ic-arrow-right', '13', '20')
+
+	section.portfolio-wrap
+		.container
+			.row
+				.col-12
+					h2 Our works
+
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. 
+
+		-
+			var list=[
+				{img:'portfolio1.jpg', title:'Lorem ipsum dolor sit amet', text:'Nam rhoncus dui augue, vel aliquet lorem tempor ac. Curabitur porta augue ac nisi feugiat venenatis. Pellentesque tincidunt efficitur ex, non placerat orci dictum eget. Vivamus eleifend velit ac tincidunt feugiat. Duis dignissim nulla quis ipsum eleifend, sed ultricies neque efficitur. Proin congue odio quis molestie tincidunt. Suspendisse iaculis pharetra consectetur. Ut luctus sagittis augue a fringilla. Phasellus libero nunc, hendrerit auctor enim sed, euismod lobortis lectus. Pellentesque sed facilisis urna.'},
+				{img:'portfolio2.jpg', title:'Lorem ipsum dolor sit amet', text:'Nam rhoncus dui augue, vel aliquet lorem tempor ac. Curabitur porta augue ac nisi feugiat venenatis. Pellentesque tincidunt efficitur ex, non placerat orci dictum eget. Vivamus eleifend velit ac tincidunt feugiat. Duis dignissim nulla quis ipsum eleifend, sed ultricies neque efficitur. Proin congue odio quis molestie tincidunt. Suspendisse iaculis pharetra consectetur. Ut luctus sagittis augue a fringilla. Phasellus libero nunc, hendrerit auctor enim sed.'},
+				{img:'portfolio3.jpg', title:'Lorem ipsum dolor sit amet', text:'Nam rhoncus dui augue, vel aliquet lorem tempor ac. Curabitur porta augue ac nisi feugiat venenatis. Pellentesque tincidunt efficitur ex, non placerat orci dictum eget. Vivamus eleifend velit ac tincidunt feugiat. Duis dignissim nulla quis ipsum eleifend, sed ultricies neque efficitur. Proin congue odio quis molestie tincidunt. Suspendisse iaculis pharetra consectetur. Ut luctus sagittis augue a fringilla.'},
+				{img:'portfolio4.jpg', title:'Lorem ipsum dolor sit amet', text:'Nam rhoncus dui augue, vel aliquet lorem tempor ac. Curabitur porta augue ac nisi feugiat venenatis. Pellentesque tincidunt efficitur ex, non placerat orci dictum eget. Vivamus eleifend velit ac tincidunt feugiat. Duis dignissim nulla quis ipsum eleifend, sed ultricies neque efficitur. Proin congue odio quis molestie tincidunt. Suspendisse iaculis pharetra consectetur. Ut luctus sagittis augue a fringilla. Phasellus libero nunc, hendrerit auctor enim sed, euismod lobortis lectus. Pellentesque sed facilisis urna.'},
+				{img:'portfolio5.jpg', title:'Lorem ipsum dolor sit amet', text:'Nam rhoncus dui augue, vel aliquet lorem tempor ac. Curabitur porta augue ac nisi feugiat venenatis. Pellentesque tincidunt efficitur ex, non placerat orci dictum eget. Vivamus eleifend velit ac tincidunt feugiat. Duis dignissim nulla quis ipsum eleifend, sed ultricies neque efficitur. Proin congue odio quis molestie tincidunt. Suspendisse iaculis pharetra consectetur. Ut luctus sagittis augue a fringilla.'},
+				{img:'portfolio6.jpg', title:'Lorem ipsum dolor sit amet', text:'Nam rhoncus dui augue, vel aliquet lorem tempor ac. Curabitur porta augue ac nisi feugiat venenatis. Pellentesque tincidunt efficitur ex, non placerat orci dictum eget. Vivamus eleifend velit ac tincidunt feugiat. Duis dignissim nulla quis ipsum eleifend, sed ultricies neque efficitur. Proin congue odio quis molestie tincidunt. Suspendisse iaculis pharetra consectetur. Ut luctus sagittis augue a fringilla. Phasellus libero nunc, hendrerit auctor enim sed, euismod lobortis lectus.'},
+			]
+
+		.portfolio-list
+			each item in list
+				.portfolio-list__item
+					.portfolio-list__img(style="background-image: url(assets/img/"+item.img+")")
+
+					.portfolio-list__popup
+						.portfolio-list__content
+							.portfolio-list__title= item.title
+
+							.portfolio-list__text= item.text
+
+							a.btn(href='#')
+								span.btn__text
+									span Lorem ipsum
+									+svg('ic-arrow-dot','ic-arrow-dot', '55', '23')
 

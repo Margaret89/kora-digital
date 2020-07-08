@@ -1,8 +1,9 @@
-import $ from 'jquery';
+// import $ from 'jquery';
+import Swiper from 'swiper/bundle';
 // import '@fancyapps/fancybox'
 // import 'bootstrap/js/dist/modal';
 // import 'slick-slider/slick/slick.min.js';
 // import 'select2';
 // import Inputmask from "inputmask";
 
-export {$};
+export {Swiper};
