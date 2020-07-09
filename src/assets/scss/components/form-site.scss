@@ -1,0 +1,149 @@
+/*----- form-site -----*/
+.form-site{
+	text-align: center;
+	padding: 120px 0 110px;
+
+	&__head{
+		@include font(normal, bold, rem(38px), 1.4, $color-text);
+		text-transform: uppercase;
+		margin-bottom: 4px;
+	}
+
+	&__text{
+		@include font(normal, 300, rem(24px), 1.6, $color-text);
+		margin-bottom: 15px;
+	}
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: left;
+	}
+
+	&__notice{
+		@include font(normal, 300, rem(24px), 1.3, $color-text);
+		margin-top: 27px;
+
+		a{
+			font-weight: 500;
+			text-decoration: none;
+			transition: all 0.2s ease 0s;
+		}
+
+		a:hover{color: $color-main;}
+	}
+
+	&__field{
+		width: 25%;
+		position: relative;
+		margin-right: 23px;
+	}
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 100%;
+		position: absolute;
+		@include top-center;
+		left: 24px;
+
+		.icon{
+			fill: #868686;
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		height: rem(50px);
+		width: 100%;
+		outline: none;
+		border: 0;
+		border-bottom: 2px solid #868686;
+		font-family: $font-site;
+		@include font(normal, normal, rem(18px), rem(50px), $color-text);
+		padding: 0 10px 0 75px;
+		margin: 0;
+		transition: all 0.3s ease 0s;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea,
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus{
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	textarea{
+		height: 150px;
+		line-height: 1.6;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder,
+	textarea::placeholder{
+		color: #868686;
+		font-weight: 300;
+		opacity: 1;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus{
+		border-color: $color-main;
+	}
+
+	input[type="text"]:focus + &__icon .icon,
+	input[type="email"]:focus + &__icon .icon,
+	textarea:focus + &__icon .icon{
+		fill: $color-main;
+	}
+
+	&__field.error input[type="text"],
+	&__field.error input[type="email"],
+	&__field.error textarea{
+		border-color: $color-red;
+	}
+
+	&__field.error &__icon .icon{
+		fill: $color-red;
+	}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		min-width: 192px;
+	}
+
+}
+
+html[dir='rtl']{
+	.form-site{
+		&__content{text-align: right;}
+
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			padding: 0 75px 0 10px;
+		}
+
+		&__icon{
+			left: auto;
+			right: 24px;
+		}
+
+		&__field{
+			margin-right: 0;
+			margin-left: 23px;
+		}
+	}
+}
