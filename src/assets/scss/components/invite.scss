@@ -25,3 +25,29 @@
 		margin-top: 53px;
 	}
 }
+
+@media (max-width: 991px) {
+	.invite{
+		height: 440px;
+
+		&__head{
+			font-size: rem(32px);
+			margin-bottom: 20px;
+		}
+	
+		&__text{
+			font-size: rem(18px);
+		}
+
+		.btn{margin-top: 35px;}
+	}
+}
+
+@media (max-width: 375px) {
+	.invite{
+		height: 484px;
+
+		&__head{font-size: rem(24px);}
+		&__text{font-size: rem(16px);}
+	}
+}
