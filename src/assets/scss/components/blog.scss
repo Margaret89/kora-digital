@@ -145,6 +145,12 @@ html[dir='rtl']{
 			}
 		}
 	}
+
+	.blog-detail{
+		padding: 40px 0 45px;
+
+		p{line-height: 1.56;}
+	}
 }
 
 @media (max-width: 767px) {
@@ -181,4 +187,10 @@ html[dir='rtl']{
 	}
 
 	.blog-sect .pager{margin-bottom: 32px;}
+
+	.blog-detail{
+		padding: 16px 0 5px;
+
+		p{line-height: 1.375;}
+	}
 }

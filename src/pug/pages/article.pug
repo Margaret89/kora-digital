@@ -77,12 +77,12 @@ block content
 				var list=[
 					{img:'blog1.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
 					{img:'blog2.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
-					{img:'blog3.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
+					{img:'blog3.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.', class:'d-inline-flex d-md-none d-lg-inline-flex'},
 				]
 			.container
 				.row
 					each item in list
-						.col-4
+						.col-md-6.col-lg-4(class=item.class)
 							.blog-list__item
 								a(href="#").blog-list__img-wrap
 									.blog-list__img(style="background-image: url(assets/img/"+item.img+")")

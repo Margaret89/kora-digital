@@ -302,4 +302,11 @@ html[dir='rtl']{
 			margin: 15px 26px;
 		}
 	}
+
+	.top-block{
+		&__date,
+		&__develop{
+			font-size: rem(20px);
+		}
+	}
 }
