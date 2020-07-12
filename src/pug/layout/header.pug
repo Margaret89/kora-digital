@@ -1,5 +1,5 @@
 header.header
-	.container
+	.container-fluid
 		.row
 			.col-12
 				.header__content
@@ -7,12 +7,15 @@ header.header
 						img(src="assets/img/logo.svg", alt="Logo")
 
 					.header__info
-						.header__phone
+						.header__phone.d-none.d-md-inline-flex
 							a(href="tel:+0000000000") +00 000-000-00
 
 						a(href="#").btn-form
 							span.btn-form__content
-								+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+								span.d-none.d-md-inline
+									+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+								span.d-md-none
+									+svg('ic-phone-fill','ic-phone-fill', '25', '25')
 
 						span.ic-hamburger
 							span

@@ -101,3 +101,65 @@ html[dir='rtl']{
 		}
 	}
 }
+
+@media (max-width: 1349px) {
+	.blog-list{
+		&__img-wrap{height: 300px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.blog-wrap{
+		padding: 75px 0 110px;
+
+		& + .form-bg-wrap{margin-top: -50px;}
+	}
+
+	.blog-list{
+		margin-top: 11px;
+
+		&__img-wrap{
+			height: 242px;
+			margin-bottom: 16px;
+		}
+
+		&__title,
+		&__title a{
+			font-size: rem(18px);
+		}
+
+		&__text{font-size: rem(14px);}
+	}
+}
+
+@media (max-width: 767px) {
+	.blog-wrap{
+		padding: 55px 0 110px;
+
+		&__text{
+			line-height: 1.25;
+			margin: 16px auto 14px;
+		}
+
+		.blog-list{
+			&__item{margin-bottom: 26px;}
+		}
+	}
+	
+	.blog-list{
+		&__img-wrap{
+			height: 218px;
+			margin-bottom: 12px;
+		}
+
+		&__title,
+		&__title a{
+			font-size: rem(20px);
+		}
+
+		&__text{
+			font-size: rem(16px);
+			margin-top: 6px;
+		}
+	}
+}

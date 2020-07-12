@@ -67,7 +67,9 @@
 	}
 
 	&__text{
+		max-height: 215px;
 		@include font(normal, 300, rem(18px), 1.7, #fff);
+		overflow: hidden;
 	}
 
 	.btn{margin-top: 32px;}
@@ -123,4 +125,73 @@
 	}
 
 	&__item:hover{color: $color-main;}
+}
+
+@media (max-width: 991px) {
+	.portfolio-wrap{
+		padding: 73px 0 3px;
+
+		&__text{
+			line-height: 1.1;
+			margin-top: 28px;
+
+			p:last-child{margin-bottom: 0;}
+		}
+
+		.portfolio-list{margin-top: 45px;}
+	}
+
+	.portfolio-list{
+		&__item{
+			height: 215px;
+		}
+
+		&__popup{padding: 22px 15px;}
+
+		&__title{
+			font-size: rem(18px);
+			padding-bottom: 10px;
+			margin-bottom: 7px;
+		}
+
+		&__title::after {
+			width: 50px;
+			height: 3px;
+		}
+
+		&__text{
+			max-height: 80px;
+			font-size: rem(14px);
+			line-height: 1.43;
+		}
+
+		.btn{margin-top: 12px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.portfolio-wrap{
+		padding: 55px 0 3px;
+
+		&__text{
+			line-height: 1.375;
+			margin-top: 14px;
+		}
+
+		.portfolio-list{margin-top: 23px;}
+	}
+
+	.portfolio-list{
+		&__item{width: 100%;}
+
+		&__title{
+			font-size: rem(16px);
+			padding-bottom: 0;
+			margin-bottom: 11px;
+		}
+
+		&__popup{padding: 10px 23px;}
+
+		&__title::after{display: none;}
+	}
 }

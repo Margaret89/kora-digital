@@ -149,3 +149,30 @@ html[dir='rtl']{
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.header{
+		&__content{height: 70px;}
+		&__logo{width: 107px;}
+
+		&__phone,
+		&__phone a{
+			font-size: rem(25px);
+		}
+
+		&__phone{margin-right: 17px;}
+	}
+
+	html[dir='rtl']{
+		.header{
+			&__phone{
+				margin-right: 0;
+				margin-left: 17px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.progress-line{width: 100px;}
+}

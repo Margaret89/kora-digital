@@ -5,3 +5,11 @@
 
 	p:last-child{margin-bottom: 0;}
 }
+
+@media (max-width: 991px) {
+	.info-block{padding: 52px 0 72px;}
+}
+
+@media (max-width: 767px) {
+	.info-block{padding: 35px 0 54px;}
+}

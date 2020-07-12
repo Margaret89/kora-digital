@@ -45,7 +45,7 @@
 
 .footer-main{
 	background: $color-grey;
-	padding: 23px 0 33px;
+	padding: 23px 0 5px;
 }
 
 .footer-menu{
@@ -55,6 +55,8 @@
 	&__subitem{
 		@include reset-list;
 	}
+
+	&{margin-bottom: 28px;}
 
 	&__title{
 		margin-bottom: 12px;
@@ -103,6 +105,96 @@ html[dir='rtl']{
 		&__item:not(:last-child){
 			margin-right: 0;
 			margin-left: 38px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.footer-top{
+		padding: 16px 0;
+
+		&__phone,
+		&__phone a{
+			font-size: rem(25px);
+		}
+
+		&__phone{margin-right: 36px;}
+
+		&__logo{width: 107px;}
+	}
+
+	.footer-social{
+		margin-right: 62px;
+
+		&__item:not(:last-child){margin-right: 19px;}
+	}
+
+	html[dir='rtl']{
+		.footer-top{
+			&__phone{
+				margin-right: 0;
+				margin-left: 36px;
+			}
+		}
+
+		.footer-social{
+			margin-right: 0;
+			margin-left: 62px;
+	
+			&__item:not(:last-child){
+				margin-right: 0;
+				margin-left: 19px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-top{
+		&__content{flex-wrap: wrap;}
+
+		&__info{
+			width: 100%;
+			margin-top: 23px;
+
+			.btn-form{
+				position: absolute;
+				top: 0;
+				right: 23px;
+			}
+		}
+	}
+
+	.footer-social{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+
+		&__item:not(:last-child){margin-right: 41px;}
+	}
+
+	.footer-menu{
+		margin-bottom: 21px;
+		
+		&__title{margin-bottom: 14px;}
+		&__link{font-size: rem(16px);}
+		&__sublink{font-size: rem(14px);}
+		&__subitem:not(:last-child){margin-bottom: 6px;}
+	}
+
+	.footer-copyright{font-size: rem(14px);}
+
+	html[dir='rtl']{
+		.footer-social{
+			margin-right: 0;
+			margin-left: 0;
+
+			&__item:not(:last-child){
+				margin-right: 0;
+				margin-left: 41px;
+			}
 		}
 	}
 }

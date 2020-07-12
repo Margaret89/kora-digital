@@ -1,6 +1,6 @@
 footer.footer
 	.footer-top
-		.container
+		.container-fluid
 			.row
 				.col-12
 					.footer-top__content
@@ -23,15 +23,18 @@ footer.footer
 										+svg(item.icon, item.icon, item.width, item.height)
 
 
-							.footer-top__phone
+							.footer-top__phone.d-none.d-md-inline-flex
 								a(href="tel:+0000000000") +00 000-000-00
 
 							a(href="#").btn-form
 								span.btn-form__content
-									+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+									span.d-none.d-md-inline
+										+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+									span.d-md-none
+										+svg('ic-phone-fill','ic-phone-fill', '25', '25')
 							
 	.footer-main
-		.container
+		.container-fluid
 			.row
 				-
 					var list = [
@@ -52,7 +55,7 @@ footer.footer
 					]
 
 				each menu in list
-					.col-2
+					.col-6.col-md-4.col-xxl-2
 						ul.footer-menu
 							li.footer-menu__item
 								.footer-menu__title
@@ -64,7 +67,7 @@ footer.footer
 											a(href="#").footer-menu__sublink= item
 
 	.footer-copyright
-		.container
+		.container-fluid
 			.row
 				.col-12
 					| Copyright©KoraDigital

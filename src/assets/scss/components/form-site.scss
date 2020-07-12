@@ -212,3 +212,79 @@ html[dir='rtl']{
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.form-site-wrap{padding: 66px 0 73px;}
+
+	.form-site{
+		&__head{
+			font-size: rem(32px);
+			margin-bottom: 11px;
+		}
+
+		&__text{
+			font-size: rem(18px);
+			margin-bottom: 10px;
+		}
+
+		&__notice{
+			font-size: rem(18px);
+			line-height: 1.67;
+			margin-top: 22px;
+		}
+
+		&__content{
+			display: block;
+			max-width: 420px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__field{
+			width: 100%;
+			margin: 0 0 15px;
+		}
+
+		.btn{
+			display: table;
+			margin: 31px auto 0;
+		}
+
+		.btn,
+		input[type="submit"].btn,
+		button.btn{
+			min-width: 154px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-site-wrap{padding: 50px 0 63px;}
+
+	.form-site{
+		&__head{
+			font-size: rem(24px);
+			line-height: 1.25;
+			margin-bottom: 26px;
+		}
+
+		&__text{
+			font-size: rem(16px);
+			line-height: 1.25;
+		}
+
+		.btn{
+			width: 100%;
+			height: rem(48px);
+			font-size: rem(20px);
+			line-height: rem(44px);
+		}
+
+		&__notice{
+			font-size: rem(20px);
+			line-height: 1.2;
+		}
+
+		&__content{max-width: 100%;}
+	}
+}

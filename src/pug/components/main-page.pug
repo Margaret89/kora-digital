@@ -1,5 +1,5 @@
 section.top-block
-	.container
+	.container-fluid
 		.row
 			.col-12
 				.top-block__content
@@ -21,7 +21,7 @@ section.top-block
 	.btn-scroll
 
 section.info-block
-	.container
+	.container-fluid
 		.row
 			.col-12
 				h2 About company
@@ -29,12 +29,13 @@ section.info-block
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. Cras enim elit, consectetur sed ultricies sit amet, ultrices non enim. Vivamus sed enim eu mi semper molestie sit amet a mi. Suspendisse nunc lacus, iaculis non dui ut, dignissim lacinia elit. Maecenas bibendum nisi vitae nisi egestas vehicula at nec lacus. Nullam gravida sem et mi dictum, at tincidunt ex suscipit. Fusce rhoncus massa odio, vitae sagittis odio ornare sed. Vestibulum at felis mauris. Aenean nec lorem at enim gravida posuere in eget velit. Cras mollis mauris odio, vitae auctor dui tincidunt vitae.
 
 section.services-slider-wrap.bg-grey
-	.container
+	.container-fluid
 		.row
 			.col-12
 				h2 Our services
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. 
+				.services-slider-wrap__text
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. 
 
 				-
 					var list=[
@@ -64,12 +65,13 @@ section.services-slider-wrap.bg-grey
 						+svg('ic-arrow-right','ic-arrow-right', '13', '20')
 
 section.portfolio-wrap
-	.container
+	.container-fluid
 		.row
 			.col-12
 				h2 Our works
 
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. 
+				.portfolio-wrap__text
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. 
 
 	-
 		var list=[
@@ -98,7 +100,7 @@ section.portfolio-wrap
 								+svg('ic-arrow-dot','ic-arrow-dot', '55', '23')
 
 section.form-site-wrap
-	.container
+	.container-fluid
 		.row
 			.col-12
 				.form-site
@@ -134,7 +136,7 @@ section.form-site-wrap
 						a(href="mailto:example@mail.com") example@mail.com
 
 section.blog-wrap.bg-grey
-	.container
+	.container-fluid
 		.row
 			.col-12
 				h2 Professional magazine
@@ -142,20 +144,18 @@ section.blog-wrap.bg-grey
 				.blog-wrap__text
 					p All the world's hottest news and updates in website building, SEO promotion, digital marketing, web development and systems development.
 
-				
-				
-				
+
 	.blog-list
 		-
 			var list=[
 				{img:'blog1.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
 				{img:'blog2.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
-				{img:'blog3.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
+				{img:'blog3.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.', class:'d-inline-flex d-md-none d-lg-inline-flex'},
 			]
-		.container
+		.container-fluid
 			.row
 				each item in list
-					.col-4
+					.col-md-6.col-lg-4(class=item.class)
 						.blog-list__item
 							a(href="#").blog-list__img-wrap
 								.blog-list__img(style="background-image: url(assets/img/"+item.img+")")
@@ -175,7 +175,7 @@ section.form-bg-wrap
 	img.form-bg-wrap__triangle.form-bg-wrap__triangle_left(src="assets/img/triangle-left-up-grey.png", alt="")
 	img.form-bg-wrap__triangle.form-bg-wrap__triangle_right(src="assets/img/triangle-right-up-grey.png", alt="")
 
-	.container
+	.container-fluid
 		.row
 			.col-12
 				.form-bg

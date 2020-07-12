@@ -113,6 +113,11 @@ main{
 	font-size: rem(24px);
 }
 
+.container-fluid{
+	padding-left: 110px;
+	padding-right: 110px;
+}
+
 .bg-shadow{
 	display: block;
 	width: 100%;
@@ -244,5 +249,82 @@ html[dir='rtl']{
 		}
 
 		.ic-arrow-dot{transform: none;}
+	}
+}
+
+@media (max-width: 1349px) {
+	.container-fluid{
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+}
+
+@media (max-width: 991px) {
+	.container-fluid{
+		padding-left: 38px;
+		padding-right: 38px;
+	}
+
+	main{
+		font-size: rem(18px);
+		line-height: 1.56;
+	}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: rem(48px);
+		min-width: 168px;
+		font-size: rem(16px);
+		line-height: rem(44px);
+		padding: 0 12px;
+	}
+
+	h1,.h1{font-size: rem(45px);}
+
+	h2,.h2{
+		font-size: rem(32px);
+		padding-bottom: 24px;
+	}
+
+	.btn{
+		.ic-arrow-dot{
+			width: 38px;
+			height: 16px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.container-fluid{
+		padding-left: 23px;
+		padding-right: 23px;
+	}
+
+	h2,.h2{
+		font-size: rem(24px);
+		padding-bottom: 10px;
+		margin-bottom: 11px;
+	}
+
+	h2::after,
+	.h2::after{
+		width: 49px;
+		height: 3px;
+	}
+
+	main{
+		font-size: rem(16px);
+		line-height: 1.375;
+	}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: rem(42px);
+		min-width: 147px;
+		font-size: rem(14px);
+		line-height: rem(38px);
+		padding: 0 10px;
 	}
 }
