@@ -1,0 +1,44 @@
+/*----- popup -----*/
+.popup-wrap{
+	max-height: 90%;
+	border-radius: 0;
+	box-shadow: 2.5px 4.33px 19px 1px rgba(0, 0, 0, 0.3);
+	width: 800px;
+	padding: 0;
+	background: #fff;
+	position: fixed;
+	@include top-center;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1010;
+	overflow-y: auto;
+}
+
+.popup{
+	width: 100%;
+	background: #fff;
+	position: relative;
+	padding: 93px 60px 77px;
+
+	&__close{
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		position: absolute;
+		top: 54px;
+		right: 48px;
+	}
+
+	.ic-close{transition: all 0.3s ease 0s;}
+	&__close:hover .ic-close{fill: $color-main;}
+}
+
+html[dir='rtl']{
+	.popup{
+		&__close{
+			right: auto;
+			left: 48px;
+		}
+	}
+}
