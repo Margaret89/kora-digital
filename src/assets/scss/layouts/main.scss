@@ -187,11 +187,20 @@ button.btn_border:hover{
 
 .btn_border::before{background: $color-main;}
 
+.btn_small,
+input[type="submit"].btn_small,
+button.btn_small{
+	height: rem(50px);
+	line-height: rem(46px);
+}
+
 .btn{
 	.icon:first-child{margin-right: 16px;}
 	.icon:last-child{margin-left: 16px;}
 
 	.ic-arrow-dot{transform: rotate(180deg);}
+
+	.ic-cup{margin-top: -5px;}
 }
 
 .code{

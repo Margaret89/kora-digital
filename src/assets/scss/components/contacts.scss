@@ -1,0 +1,41 @@
+/*----- contacts -----*/
+.contacts-wrap{
+	padding: 70px 0 123px;
+
+	.form-site{
+		&__text{max-width: 665px;}
+	}
+}
+
+.contacts-list{
+	text-align: center;
+	margin-top: 47px;
+
+	&__item:not(:last-child){margin-bottom: 44px;}
+
+	&__title{
+		margin-bottom: 3px;
+
+		.icon{fill: $color-main;}
+		.ic-marker{margin-top: -4px;}
+		.ic-phone{margin-top: -6px;}
+	}
+
+	&__title-text{
+		@include font(normal, 500, rem(24px), 1.25, $color-text);
+		margin-right: 3px;
+	}
+
+	&__text{
+		@include font(normal, 300, rem(24px), 1.6, $color-text);
+	}
+}
+
+html[dir='rtl']{
+	.contacts-list{
+		&__title-text{
+			margin-right: 0;
+			margin-left: 3px;
+		}
+	}
+}

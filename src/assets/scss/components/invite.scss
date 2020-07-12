@@ -1,0 +1,27 @@
+/*----- invite -----*/
+.invite{
+	display: flex;
+	align-items: center;
+	height: 550px;
+	background: url(#{$path-img}/bg-invite.jpg) no-repeat center;
+	background-attachment: fixed;
+	padding: 40px 0;
+	text-align: center;
+
+	&__head{
+		@include font(normal, bold, rem(38px), 1.25, $color-main);
+		text-transform: uppercase;
+		text-shadow: 1.5px 2.598px 4.75px rgba(0, 0, 0, 0.2);
+		margin-bottom: 10px;
+	}
+
+	&__text{
+		@include font(normal, 300, rem(24px), 1.25, #fff);
+		text-shadow: 1.5px 2.598px 4.75px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn{
+		min-width: 333px;
+		margin-top: 53px;
+	}
+}

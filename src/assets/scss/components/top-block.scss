@@ -39,19 +39,23 @@
 	}
 
 	&__head_line{padding-top: 37px;}
+	&__head_line-bottom{padding-bottom: 32px;}
 
-	&__head_line::before{
+	&__head_line::before,
+	&__head_line-bottom::before{
 		content: '';
 		display: inline-block;
 		width: 70px;
 		height: 4px;
 		background: $color-main;
 		position: absolute;
-		top: 0;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
 	}
+
+	&__head_line::before{top: 0;}
+	&__head_line-bottom::before{bottom: 0;}
 
 	&__text{
 		@include font(normal, 300, rem(24px), 1.67, #fff);

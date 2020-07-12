@@ -83,10 +83,9 @@
 	}
 
 	textarea{
-		height: 150px;
+		height: 180px;
 		line-height: 1.6;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding: 10px;
 	}
 
 	input[type="text"]::placeholder,
@@ -148,6 +147,34 @@
 		display: table;
 		margin: 34px auto 0;
 	}
+
+	&_semi-vertical &__content{
+		flex-wrap: wrap;
+		margin-left: -11px;
+		margin-right: -11px;
+	}
+
+	&_semi-vertical &__field,
+	&_semi-vertical .btn{
+		width: calc(33.33% - 22px);
+		margin: 0 11px 37px;
+	}
+
+	&_semi-vertical .btn{margin-bottom: 0;}
+
+	&_semi-vertical &__field_big,
+	&_semi-vertical .btn{
+		width: calc(100% - 22px);
+	}
+
+	&_semi-vertical &__icon{left: 12px;}
+
+	&_semi-vertical input[type="text"],
+	&_semi-vertical input[type="email"]{
+		padding: 0 10px 0 55px;
+	}
+
+	&_semi-vertical .btn{margin-top: -12px;}
 }
 
 html[dir='rtl']{
@@ -155,8 +182,7 @@ html[dir='rtl']{
 		&__content{text-align: right;}
 
 		input[type="text"],
-		input[type="email"],
-		textarea{
+		input[type="email"]{
 			padding: 0 75px 0 10px;
 		}
 
@@ -168,6 +194,21 @@ html[dir='rtl']{
 		&__field{
 			margin-right: 0;
 			margin-left: 23px;
+		}
+
+		&.form-site_semi-vertical .form-site__field{
+			margin-left: 11px;
+			margin-right: 11px;
+		}
+
+		&.form-site_semi-vertical .form-site__icon{
+			left: auto;
+			right: 12px;
+		}
+
+		&.form-site_semi-vertical input[type="text"],
+		&.form-site_semi-vertical input[type="email"]{
+			padding: 0 55px 0 10px;
 		}
 	}
 }
