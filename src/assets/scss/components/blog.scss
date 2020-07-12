@@ -11,10 +11,26 @@
 	}
 
 	& + .form-bg-wrap{margin-top: -105px;}
+
+	.blog-list{
+		&__item{margin-bottom: 62px;}
+	}
+}
+
+.blog-sect{
+	padding-top: 100px;
+
+	.blog-list{
+		&__img-wrap{margin-bottom: 20px;}
+	}
+
+	.pager{margin-bottom: 0;}
 }
 
 .blog-list{
 	text-align: center;
+
+	&__item{margin-bottom: 74px;}
 
 	&__img-wrap{
 		display: block;
@@ -51,5 +67,27 @@
 		margin-top: 10px;
 	}
 
-	&__more{margin-top: 62px;}
+	&__date{
+		@include font(normal, 300, rem(16px), 1.2, #b4b4b4);
+		margin-top: 6px;
+		margin-bottom: -6px;
+
+		.icon{
+			display: inline-block;
+			vertical-align: middle;
+			fill: #b4b4b4;
+			margin-right: 5px;
+		}
+
+		.ic-calendar{margin-top: -3px;}
+	}
+}
+
+html[dir='rtl']{
+	.blog-list{
+		&__date .icon{
+			margin-right: 0;
+			margin-left: 5px;
+		}
+	}
 }

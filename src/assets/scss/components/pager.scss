@@ -1,0 +1,59 @@
+/*-------------- pager -----------------*/
+.pager{
+	margin: 15px auto;
+	text-align: center;
+
+	&__content{
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 1px solid #bfc1c4;
+	}
+
+	&__item,
+	&__arr{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		@include font(normal, bold, rem(16px), 1, #bdbdbe);
+		text-align: center;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		background: transparent;
+		margin-bottom: -1px;
+		transition: all 0.2s ease 0s;
+		cursor: pointer;
+	}
+
+	&__item:not(:last-child),
+	&__arr:not(:last-child){
+		margin-right: 5px;
+	}
+
+	&__item:hover,
+	&__item.active{
+		color: $color-text;
+	}
+
+	&__item.active{border-color: $color-text;}
+
+	&__arr .icon{
+		fill: #bfc1c4;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__arr:hover .icon{fill: $color-text;;}
+}
+
+html[dir='rtl']{
+	.pager{
+		&__item:not(:last-child),
+		&__arr:not(:last-child){
+			margin-right: 0;
+			margin-left: 5px;
+		}
+	}
+}

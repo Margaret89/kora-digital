@@ -10,6 +10,8 @@
 	position: relative;
 	margin-bottom: 20px;
 
+	&_end{align-items: flex-end;}
+
 	&__triangle{
 		width: 50%;
 		height: 16%;
@@ -26,16 +28,19 @@
 		text-align: center;
 	}
 
+	&__content_big{max-width: 1390px;}
+
 	&__head{
 		@include font(normal, bold, rem(64px), 1.15, $color-main);
 		text-transform: uppercase;
 		text-shadow: 1.5px 2.598px 4.75px rgba(0, 0, 0, 0.2);
-		padding-top: 37px;
 		margin-bottom: 20px;
 		position: relative;
 	}
 
-	&__head::before{
+	&__head_line{padding-top: 37px;}
+
+	&__head_line::before{
 		content: '';
 		display: inline-block;
 		width: 70px;
@@ -51,6 +56,22 @@
 	&__text{
 		@include font(normal, 300, rem(24px), 1.67, #fff);
 		text-shadow: 1.5px 2.598px 4.75px rgba(0, 0, 0, 0.2);
+		position: relative;
+	}
+
+	&__text_line{padding-bottom: 47px;}
+
+	&__text_line::before{
+		content: '';
+		display: inline-block;
+		width: 70px;
+		height: 4px;
+		background: $color-main;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 	}
 
 	&__btn{
@@ -60,6 +81,8 @@
 
 		.btn:not(:last-child){margin-right: 26px;}
 	}
+
+	.top-filter{margin-top: 30px;}
 }
 
 @keyframes scroll{
@@ -79,6 +102,25 @@
 	right: 0;
 	margin: 0 auto;
 	animation: scroll 1s infinite ease-in-out;
+}
+
+.top-filter{
+	display: flex;
+	justify-content: center;
+
+	&__item{
+		@include font(normal, 300, rem(24px), 1.25, #fff);
+		text-decoration: none;
+		transition: all 0.2s ease 0s;
+		margin: 15px 32px;
+	}
+
+	&__item.active,
+	&__item:hover{
+		font-weight: 500;
+		color: $color-main;
+		text-decoration: underline;
+	}
 }
 
 html[dir='rtl']{
