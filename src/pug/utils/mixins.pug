@@ -12,7 +12,7 @@ mixin breadcrumbs(links)
 		.container
 			.row
 				.col-12
-					ul.breadcrumb
+					ul.breadcrumb.d-none.d-md-flex
 						- var i=0
 						while i < len-1
 							li.breadcrumb__item
@@ -23,6 +23,11 @@ mixin breadcrumbs(links)
 							- i++
 						li.breadcrumb__item
 							span=links[i].name
+
+					.d-md-none
+						.link-back
+							+svg('ic-back-shadow','ic-back-shadow', '17', '20')
+							.link-back__text Back
 
 mixin svg(icon, name_class, width,height)
 	svg.icon(class=name_class?name_class:'', width=width?width:'', height=height?height:'')

@@ -11,6 +11,7 @@ block content
 				{href:'#',name:'Blog'},
 			];
 
+		
 		+breadcrumbs(breadcrumbs)
 
 		.container
@@ -61,7 +62,7 @@ block content
 			.container
 				.row
 					each item in list
-						.col-4
+						.col-md-6.col-lg-4
 							.blog-list__item
 								a(href="#").blog-list__img-wrap
 									.blog-list__img(style="background-image: url(assets/img/"+item.img+")")
@@ -87,7 +88,7 @@ block content
 								a.pager__item(href='#') 1
 								a.pager__item.active(href='#') 2
 								a.pager__item(href='#') 3
-								a.pager__item(href='#') 4
+								a.pager__item.d-none.d-md-inline-flex(href='#') 4
 								a.pager__item(href='#') ...
 								a.pager__item(href='#') 6
 								a.pager__item(href='#') 7

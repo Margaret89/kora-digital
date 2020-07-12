@@ -46,3 +46,33 @@ html[dir='rtl']{
 		&__item .ic-arrow-page-r-shadow{transform: rotate(180deg);}
 	}
 }
+
+@media (max-width: 991px) {
+	.breadcrumb{
+		&__item{
+			font-size: rem(16px);
+
+			.ic-arrow-page-r-shadow{
+				width: 10px;
+				height: 10px;
+			}
+
+			.ic-home-shadow{
+				width: 18px;
+				height: 16px;
+				margin: -5px 6px 0 0;
+			}
+		}
+	}
+
+	html[dir='rtl']{
+		.breadcrumb{
+			&__item{
+				.ic-home-shadow{
+					margin-right: 0;
+					margin-left: 6px;
+				}
+			}
+		}
+	}
+}

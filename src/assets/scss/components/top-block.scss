@@ -142,6 +142,7 @@
 .top-filter{
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 
 	&__item{
 		@include font(normal, 300, rem(24px), 1.25, #fff);
@@ -248,9 +249,11 @@ html[dir='rtl']{
 		}
 
 		&__head_line{padding-top: 28px;}
+		&__text_line{padding-bottom: 35px;}
 
 		&__head_line::before,
-		&__head_line-bottom::before{
+		&__head_line-bottom::before,
+		&__text_line::before{
 			width: 56px;
 			height: 3px;
 		}
@@ -263,6 +266,8 @@ html[dir='rtl']{
 		&__btn{margin-top: 53px;}
 		&__btn .btn:not(:last-child){margin-right: 18px;}
 		&__triangle{height: 6%;}
+
+		.top-filter{margin-top: 18px;}
 	}
 
 	html[dir='rtl']{
@@ -271,6 +276,30 @@ html[dir='rtl']{
 				margin-right: 0;
 				margin-left: 18px;
 			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.top-block{
+		.breadcrumb-wrap{
+			top: 101px;
+		}
+	}
+
+	.top-filter{
+		&__item{
+			font-size: rem(20px);
+			margin: 15px 26px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.top-filter{
+		&__item{
+			font-size: rem(18px);
+			margin: 15px 26px;
 		}
 	}
 }

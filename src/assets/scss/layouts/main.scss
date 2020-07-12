@@ -227,6 +227,27 @@ button.btn_small{
 
 .bg-grey{background: $color-grey;}
 
+.link-back{
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	cursor: pointer;
+
+	.icon{
+		margin-right: 8px;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__text{
+		@include font(normal, 500, rem(16px), 1.25, $color-main);
+		text-shadow: 0.5px 0.866px 1.96px rgba(0, 0, 0, 0.4);
+		transition: all 0.2s ease 0s;
+	}
+
+	&:hover &__text{color: $color-main-light;}
+	&:hover .icon{fill: $color-main-light;}
+}
+
 html[dir='rtl']{
 	.btn{
 		&::before{
@@ -249,6 +270,13 @@ html[dir='rtl']{
 		}
 
 		.ic-arrow-dot{transform: none;}
+	}
+
+	.link-back{	
+		.icon{
+			margin-right: 0;
+			margin-left: 8px;
+		}
 	}
 }
 

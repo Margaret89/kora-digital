@@ -115,8 +115,14 @@ html[dir='rtl']{
 		& + .form-bg-wrap{margin-top: -50px;}
 	}
 
+	.blog-sect{padding-top: 35px;}
+
 	.blog-list{
 		margin-top: 11px;
+
+		&__item{
+			margin-bottom: 35px;
+		}
 
 		&__img-wrap{
 			height: 242px;
@@ -129,6 +135,15 @@ html[dir='rtl']{
 		}
 
 		&__text{font-size: rem(14px);}
+
+		&__date{
+			font-size: rem(14px);
+
+			.ic-calendar{
+				width: 16px;
+				height: 15px;
+			}
+		}
 	}
 }
 
@@ -161,5 +176,9 @@ html[dir='rtl']{
 			font-size: rem(16px);
 			margin-top: 6px;
 		}
+
+		&__date{margin-bottom: -3px;}
 	}
+
+	.blog-sect .pager{margin-bottom: 32px;}
 }
