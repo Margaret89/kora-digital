@@ -1,0 +1,21 @@
+/*----- social-page -----*/
+.social-page{
+	&__item{text-decoration: none;}
+	&__item:not(:last-child){margin-right: 38px;}
+
+	.icon{
+		fill: $color-text;
+		transition: all 0.2s ease 0s;
+	}
+
+	.icon:hover{fill: $color-main;}
+}
+
+html[dir='rtl']{
+	.social-page{
+		&__item:not(:last-child){
+			margin-right: 0;
+			margin-left: 38px;
+		}
+	}
+}

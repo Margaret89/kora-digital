@@ -1,0 +1,30 @@
+/*----- like -----*/
+.like{
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+
+	.icon{
+		fill: $color-text;
+		margin-right: 8px;
+		margin-top: -2px;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__num{
+		@include font(normal, 500, rem(16px), 1.25, $color-text);
+		transition: all 0.2s ease 0s;
+	}
+
+	// &:hover .icon{fill: $color-main;}
+	// &:hover &__num{color: $color-main;}
+}
+
+html[dir='rtl']{
+	.like{
+		.icon{
+			margin-right: 0;
+			margin-left: 8px;
+		}
+	}
+}

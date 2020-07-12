@@ -76,3 +76,51 @@
 
 	&__item:hover &__popup{top: 0;}
 }
+
+.portfolio-detail{
+	padding-top: 70px;
+
+	&__head{
+		@include font(normal, bold, rem(38px), 1.3, $color-text);
+		text-transform: uppercase;
+		text-align: center;
+		padding-bottom: 41px;
+		margin-bottom: 37px;
+		position: relative;
+	}
+
+	&__head::after{
+		content: '';
+		display: inline-block;
+		width: 70px;
+		height: 4px;
+		background: $color-main;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__text{text-align: center;}
+
+	.social-page{margin-top: 5px;}
+
+	.like{margin-top: 14px;}
+}
+
+.portf-nav{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 40px;
+
+	&__item{
+		@include font(normal, 300, rem(20px), 1.25, #868686);
+		text-decoration: none;
+		margin: 10px 22px;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__item:hover{color: $color-main;}
+}
