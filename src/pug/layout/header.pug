@@ -23,12 +23,15 @@ header.header
 				.sidebar(class=openSidebar?'open':'')
 					.sidebar__content
 						.sidebar__top
-							.sidebar__phone
+							.sidebar__phone.d-none.d-md-inline-flex
 								a(href="tel:+0000000000") +00 000-000-00
 
 							a(href="#").btn-form
 								span.btn-form__content
-									+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+									span.d-none.d-md-inline
+										+svg('ic-mail-fill','ic-mail-fill', '23', '16')
+									span.d-md-none
+										+svg('ic-phone-fill','ic-phone-fill', '25', '25')
 
 							.lang
 								span.lang__content En

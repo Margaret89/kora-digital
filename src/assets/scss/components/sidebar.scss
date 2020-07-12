@@ -171,3 +171,26 @@ html[dir='rtl']{
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.sidebar{
+		&__top{height: 70px;}
+
+		&__phone,
+		&__phone a{
+			font-size: rem(25px);
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.sidebar{
+		width: 100%;
+	}
+
+	.sidebar-menu{
+		&__link{font-size: rem(22px);}
+		&__sublink{font-size: rem(18px);}
+		&__arr{top: 7px;}
+	}
+}
