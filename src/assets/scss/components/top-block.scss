@@ -153,10 +153,11 @@
 
 	&__item.active,
 	&__item:hover{
-		font-weight: 500;
 		color: $color-main;
 		text-decoration: underline;
 	}
+
+	&__item.active{font-weight: 500;}
 }
 
 .top-menu{
