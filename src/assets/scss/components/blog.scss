@@ -83,6 +83,16 @@
 	}
 }
 
+.blog-detail{
+	text-align: center;
+	padding: 85px 0 60px;
+
+	p{
+		line-height: 1.67;
+		letter-spacing: 0.18px;
+	}
+}
+
 html[dir='rtl']{
 	.blog-list{
 		&__date .icon{

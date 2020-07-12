@@ -5,6 +5,14 @@ block variables
 
 block content
 	section.top-block.top-block_end(style="background-image: url(assets/img/bg-blog.jpg)")
+		-
+			var breadcrumbs=[
+				{href:'/',name:'Home'},
+				{href:'#',name:'Blog'},
+			];
+
+		+breadcrumbs(breadcrumbs)
+
 		.container
 			.row
 				.col-12

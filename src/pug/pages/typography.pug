@@ -5,15 +5,6 @@ block variables
 	- var h1 = 'Typography';
 
 
-block breadcrumb
-	-
-		var breadcrumbs=[
-			{href:'/',name:'Main'},
-			{href:'#',name:'Typography'},
-		];
-
-	+breadcrumbs(breadcrumbs)
-
 block content
 	section(style="margin-top: 130px;")
 		.container
@@ -176,6 +167,11 @@ block content
 
 						.type-icon__item
 							.type-icon__img
+								+svg('ic-share','ic-share', '18', '18')
+							.type-icon__name ic-share
+
+						.type-icon__item
+							.type-icon__img
 								+svg('ic-drib','ic-drib', '24', '24')
 							.type-icon__name ic-drib
 
@@ -188,3 +184,8 @@ block content
 							.type-icon__img
 								+svg('ic-calendar','ic-calendar', '18', '17')
 							.type-icon__name ic-calendar
+
+						.type-icon__item
+							.type-icon__img
+								+svg('ic-home','ic-home', '21', '19')
+							.type-icon__name ic-home

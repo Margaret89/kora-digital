@@ -83,6 +83,37 @@
 	}
 
 	.top-filter{margin-top: 30px;}
+
+	.breadcrumb-wrap{
+		width: 100%;
+		position: absolute;
+		top: 130px;
+		left: 0;
+	}
+
+	&__notice{margin-top: 20px;}
+
+	&__develop{
+		@include font(normal, 500, rem(24px), 1.6, #fff);
+	}
+
+	&__date{
+		@include font(normal, normal, rem(24px), 1.6, #fff);
+	}
+
+	.top-social{margin-top: 26px;}
+}
+
+.top-social{
+	&__item{text-decoration: none;}
+	&__item:not(:last-child){margin-right: 38px;}
+
+	.icon{
+		fill: #fff;
+		transition: all 0.2s ease 0s;
+	}
+
+	.icon:hover{fill: $color-main;}
 }
 
 @keyframes scroll{
@@ -128,6 +159,13 @@ html[dir='rtl']{
 		&__btn .btn:not(:last-child){
 			margin-right: 0;
 			margin-left: 26px;
+		}
+	}
+
+	.top-social{
+		&__item:not(:last-child){
+			margin-right: 0;
+			margin-left: 38px;
 		}
 	}
 }

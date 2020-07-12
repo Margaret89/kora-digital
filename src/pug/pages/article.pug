@@ -1,0 +1,130 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Article';
+
+block content
+	section.top-block(style="background-image: url(assets/img/bg-article.jpg)")
+		-
+			var breadcrumbs=[
+				{href:'/',name:'Home'},
+				{href:'#',name:'Blog'},
+				{href:'#',name:'Article title'},
+			];
+
+		+breadcrumbs(breadcrumbs)
+
+		.container
+			.row
+				.col-12
+					.top-block__content.top-block__content_big
+						.top-block__head Lorem ipsum dolor sit
+
+						.top-block__text.top-block__text_line Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+
+						.top-block__notice
+							.top-block__develop Marketing, Web
+							.top-block__date Jhon Doe, 20 May 2020
+
+						.top-social
+							-
+								var list=[
+									{icon:'ic-watchapp', width:'23', height:'23'},
+									{icon:'ic-in', width:'17', height:'17'},
+									{icon:'ic-fb', width:'10', height:'23'},
+									{icon:'ic-share', width:'18', height:'18'},
+								]
+
+							each item in list
+								a(href="#").top-social__item
+									+svg(item.icon, item.icon, item.width, item.height)
+
+		
+		img.top-block__triangle.top-block__triangle_left(src="assets/img/triangle-left.png", alt="")
+		img.top-block__triangle.top-block__triangle_right(src="assets/img/triangle-right.png", alt="")
+		
+		.btn-scroll
+
+	section.blog-detail
+		.container
+			.row
+				.col-12
+					.blog-detail__text
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non augue mattis, aliquam ante sit amet, tincidunt odio. In vehicula arcu lorem, non fermentum risus faucibus a. In hendrerit laoreet risus. Etiam elit tortor, tincidunt eget sagittis sit amet, efficitur eget massa. Quisque eget nunc justo. Aliquam erat volutpat. Sed urna sapien, auctor at dolor in, condimentum mollis purus. Nulla a lectus et risus dignissim tempus in id nisi. Pellentesque feugiat enim lectus, a finibus lectus gravida vel. Aliquam malesuada volutpat orci, nec dapibus velit sollicitudin et. Donec sed nibh erat. Praesent mollis aliquam arcu, quis laoreet quam aliquet vitae.
+
+						p Nullam et euismod velit, in hendrerit eros. Proin eget risus ac ex tempor fermentum. Duis lacinia scelerisque justo tempor tempus. Integer dapibus orci a lacus mollis dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis semper sollicitudin lorem, at molestie quam posuere eget. Nulla pretium tincidunt eleifend. Mauris feugiat dui diam, scelerisque tincidunt dui maximus convallis. Aliquam vel lectus dapibus, semper leo vel, semper eros. Nunc elit ipsum, pulvinar varius elit eu, dictum auctor libero. Vestibulum quam erat, rutrum sed augue sed, faucibus tincidunt est.
+
+						p Ut auctor commodo arcu nec volutpat. Etiam facilisis lorem sed risus tincidunt semper. Aenean posuere elementum velit aliquam pellentesque. Sed id vulputate quam. Praesent eu quam posuere, posuere nisi et, consectetur ex. Fusce at tristique diam, ac mollis sem. Donec felis dui, ultricies eu placerat ut, convallis eu mauris.
+
+						p Vestibulum id leo eu orci pharetra pellentesque vitae id lacus. Pellentesque molestie volutpat pellentesque. Nullam in augue vel tellus cursus facilisis. Proin laoreet quam vel erat suscipit tincidunt. Sed viverra dolor leo, id pharetra nulla suscipit non. Nullam et fermentum dolor, id pretium tortor. Sed finibus interdum augue, in pellentesque lacus fermentum vel. In ac ornare ligula.
+
+						p In feugiat tincidunt elit. Nunc nec mauris erat. Sed ornare, odio in porta vehicula, sapien dolor dignissim neque, eu luctus justo mi eget arcu. Pellentesque rhoncus lacus id tellus ultricies placerat. Pellentesque luctus eleifend porttitor. Aliquam vitae convallis orci. Cras facilisis erat at arcu iaculis mattis. Praesent tincidunt accumsan diam in porttitor. Pellentesque eget nulla dictum, tempus dolor sit amet, blandit metus. Mauris pretium sapien in magna dapibus convallis. Proin commodo laoreet dolor, sit amet suscipit sem tempor sit amet. Etiam tincidunt, erat sit amet commodo fermentum, ante lacus fermentum dolor, sit amet tincidunt odio odio et ex. Ut bibendum id augue sit amet elementum. 
+
+	section.blog-wrap.bg-grey
+		.container
+			.row
+				.col-12
+					h2 It is interesting for you
+
+					.blog-wrap__text
+						p All the world's hottest news and updates in website building, SEO promotion, digital marketing, web development and systems development.
+
+					
+					
+					
+		.blog-list
+			-
+				var list=[
+					{img:'blog1.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
+					{img:'blog2.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
+					{img:'blog3.jpg', title:'Lorem ipsum dolor sit', text:'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'},
+				]
+			.container
+				.row
+					each item in list
+						.col-4
+							.blog-list__item
+								a(href="#").blog-list__img-wrap
+									.blog-list__img(style="background-image: url(assets/img/"+item.img+")")
+
+								.blog-list__title
+									a(href="#")= item.title
+
+								.blog-list__text= item.text
+
+				.blog-list__more
+					a.btn(href='#')
+						span.btn__text
+							span Read more
+							+svg('ic-arrow-dot','ic-arrow-dot', '55', '23')
+
+	section.form-bg-wrap
+		img.form-bg-wrap__triangle.form-bg-wrap__triangle_left(src="assets/img/triangle-left-up-grey.png", alt="")
+		img.form-bg-wrap__triangle.form-bg-wrap__triangle_right(src="assets/img/triangle-right-up-grey.png", alt="")
+
+		.container
+			.row
+				.col-12
+					.form-bg
+						.form-bg__title Want to know more?
+
+						.form-bg__text Fill out the details in the form below and we will get back to you as soon as possible
+
+						.form-bg__content
+							-
+								var fileds=[
+									{icon:'ic-person', icon_width:'20', icon_height:'21', placeholder:'Name', type:'text'},
+									{icon:'ic-phone', icon_width:'20', icon_height:'21', placeholder:'Phone', type:'text'},
+									{icon:'ic-mail', icon_width:'22', icon_height:'15', placeholder:'E-mail', type:'email'},
+								]
+							each item in fileds
+								.form-bg__field
+									input(type=item.type, value=item.value, placeholder=item.placeholder)
+
+									.form-bg__icon
+										+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+
+							a.btn(href='#')
+								span.btn__text
+									+svg('ic-mail-fly','ic-mail-fly', '35', '21')
+									span Send

@@ -55,5 +55,10 @@ html[dir='rtl']{
 			margin-right: 0;
 			margin-left: 5px;
 		}
+
+		&__arr .ic-arrow-page-l,
+		&__arr .ic-arrow-page-r{
+			transform: rotate(180deg);
+		}
 	}
 }
