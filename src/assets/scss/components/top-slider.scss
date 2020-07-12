@@ -17,8 +17,8 @@
 		background-size: cover;
 	}
 
-	.swiper-container-horizontal > .swiper-pagination-bullets{bottom: 60px;}
-	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{margin: 0 10px;}
+	&.swiper-container-horizontal > .swiper-pagination-bullets{bottom: 60px;}
+	&.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{margin: 0 10px;}
 
 	.swiper-pagination-bullet{
 		display: inline-block;
@@ -33,5 +33,96 @@
 	.swiper-pagination-bullet:hover,
 	.swiper-pagination-bullet-active{
 		background: #fff;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		background: rgba(255,255,255,0.3);
+		border-radius: 50%;
+		transition: all 0.2s ease 0s;
+	}
+
+	.swiper-button-prev::after,
+	.swiper-button-next::after{
+		display: none;
+	}
+
+	.swiper-button-prev .icon,
+	.swiper-button-next .icon{
+		fill: #fff;
+		transition: all 0.2s ease 0s;
+	}
+
+	.swiper-button-prev:hover,
+	.swiper-button-next:hover{
+		background: rgba(255,255,255,0.5);
+	}
+
+	.swiper-button-prev:hover .icon,
+	.swiper-button-next:hover .icon{
+		fill: $color-main;
+	}
+}
+
+html[dir='rtl']{
+	.top-slider{
+		.swiper-button-prev .icon,
+		.swiper-button-next .icon{
+			transform: rotate(180deg);
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.top-slider-wrap{
+		.breadcrumb-wrap{
+			top: 101px;
+		}
+	}
+
+	.top-slider{
+		&__item{
+			height: 625px;
+		}
+
+		&.swiper-container-horizontal > .swiper-pagination-bullets{bottom: 32px;}
+
+		.swiper-button-prev,
+		.swiper-button-next{
+			margin-top: 35px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.top-slider{
+		&__item{
+			height: 384px;
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next{
+			width: 38px;
+			height: 38px;
+		}
+
+		.swiper-button-prev .icon,
+		.swiper-button-next .icon{
+			width: 9px;
+			height: 16px;
+		}
+
+		.swiper-pagination-bullet{
+			width: 9px;
+			height: 9px;
+		}
+
+		&.swiper-container-horizontal > .swiper-pagination-bullets{bottom: 18px;}
+		&.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{margin: 0 8px;}
 	}
 }

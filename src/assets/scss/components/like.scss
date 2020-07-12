@@ -28,3 +28,14 @@ html[dir='rtl']{
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.like{
+		.icon{
+			width: 17px;
+			height: 18px;
+		}
+
+		&__num{font-size: rem(13px);}
+	}
+}

@@ -29,4 +29,8 @@ var topSlider = new Swiper('.js-top-slider', {
 	pagination: {
 		el: '.js-swiper-pagination',
 	},
+	navigation: {
+		nextEl: '.js-slider-top-next',
+		prevEl: '.js-slider-top-prev',
+	},
 })

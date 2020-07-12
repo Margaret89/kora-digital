@@ -127,6 +127,12 @@
 	&__item:hover{color: $color-main;}
 }
 
+@media (max-width: 1349px) {
+	.portfolio-detail{
+		&__head{margin-top: 37px;}
+	}
+}
+
 @media (max-width: 991px) {
 	.portfolio-wrap{
 		padding: 73px 0 3px;
@@ -167,6 +173,34 @@
 
 		.btn{margin-top: 12px;}
 	}
+
+	.portfolio-detail{
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		.like,
+		.social-page{
+			margin-top: 0;
+		}
+
+		&__head{
+			font-size: rem(32px);
+			line-height: 1.4;
+			padding-bottom: 22px;
+			margin-bottom: 20px;
+		}
+
+		&__text{line-height: 1.33;}
+	}
+
+	.portf-nav{
+		margin-top: 16px;
+
+		&__item{
+			font-size: rem(16px);
+			margin: 10px 18px;
+		}
+	}
 }
 
 @media (max-width: 767px) {
@@ -197,5 +231,65 @@
 
 	.portfolio-sect{
 		.portfolio-list{margin-bottom: 0;}
+	}
+
+	.portfolio-detail{
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		&__head{
+			font-size: rem(24px);
+			line-height: 1.58;
+			margin-top: 20px;
+			padding-bottom: 11px;
+			margin-bottom: 12px;
+		}
+
+		&__head::after{
+			width: 49px;
+			height: 3px;
+		}
+
+		.social-page{
+			.ic-watchapp{
+				width: 18px;
+				height: 18px;
+			}
+
+			.ic-in{
+				width: 14px;
+				height: 14px;
+			}
+
+			.ic-fb{
+				width: 8px;
+				height: 18px;
+			}
+
+			.ic-share{
+				width: 14px;
+				height: 14px;
+			}
+
+			&__item:not(:last-child){margin-right: 30px;}
+		}
+	}
+
+	.portf-nav{
+		&__item{
+			font-size: rem(14px);
+			margin: 5px 9px;
+		}
+	}
+
+	html[dir='rtl']{
+		.portfolio-detail{
+			.social-page{
+				&__item:not(:last-child){
+					margin-right: 0;
+					margin-left: 30px;
+				}
+			}
+		}
 	}
 }
