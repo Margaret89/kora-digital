@@ -1,0 +1,21 @@
+/*----- filter-page -----*/
+.filter-page{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 12px;
+
+	&__item{
+		@include font(normal, 300, rem(28px), 1.25, $color-text);
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all 0.2s ease 0s;
+		margin: 15px 20px;
+	}
+
+	&__item.active,
+	&__item:hover{
+		font-weight: 500;
+		color: $color-main;
+		text-decoration: underline;
+	}
+}
