@@ -12,3 +12,33 @@
 
 	.form-site{margin: 100px 0;}
 }
+
+@media (max-width: 991px) {
+	.develop-detail{
+		padding: 50px 0 10px;
+
+		h2,
+		.h2{
+			line-height: 1.125;
+			padding-bottom: 24px;
+			margin-bottom: 21px;
+		}
+
+		.form-site{margin: 55px 0 48px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.develop-detail{
+		padding: 16px 0 46px;
+
+		h2,
+		.h2{
+			line-height: 1.33;
+			padding-bottom: 12px;
+			margin-bottom: 11px;
+		}
+
+		.form-site{margin: 30px 0 57px;}
+	}
+}

@@ -315,6 +315,13 @@ html[dir='rtl']{
 		padding-bottom: 24px;
 	}
 
+	h3,.h3{
+		font-size: rem(28px);
+		line-height: 1.1;
+		margin-bottom: 4px;
+		margin-top: 32px;
+	}
+
 	p{margin-bottom: 27px;}
 
 	.btn{
@@ -341,6 +348,13 @@ html[dir='rtl']{
 	.h2::after{
 		width: 49px;
 		height: 3px;
+	}
+
+	h3,.h3{
+		font-size: rem(20px);
+		line-height: 1.2;
+		margin-bottom: 6px;
+		margin-top: 24px;
 	}
 
 	p{margin-bottom: 24px;}
