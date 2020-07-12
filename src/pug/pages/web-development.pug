@@ -1,0 +1,122 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Web-development';
+
+block content
+	section.top-block(style="background-image: url(assets/img/bg-develop.jpg)")
+		-
+			var breadcrumbs=[
+				{href:'/',name:'Home'},
+				{href:'#',name:'Web development'},
+				{href:'#',name:'Website development'},
+			];
+
+		+breadcrumbs(breadcrumbs)
+
+		.container
+			.row
+				.col-12
+					.top-block__content.top-block__content_big
+						.top-block__head Web development
+
+					-
+						var list=[
+							{title:'Website development', status:'active'},
+							{title:'Development of complex sites'},
+							{title:'Portal Development'},
+							{title:'Responsive website development'},
+						]
+						
+					ul.top-menu
+						each item in list
+							a(href="#").top-menu__item(class=item.status?'active':'')= item.title
+
+		
+		img.top-block__triangle.top-block__triangle_left(src="assets/img/triangle-left.png", alt="")
+		img.top-block__triangle.top-block__triangle_right(src="assets/img/triangle-right.png", alt="")
+		
+		.btn-scroll
+
+	section.develop-detail
+		.container
+			.row
+				.col-12
+					.h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit nteger ut enim congue, tincidunt odio in, vulputate augue. 
+
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim congue, tincidunt odio in, vulputate augue. Maecenas imperdiet, quam vel semper dapibus, purus sapien imperdiet turpis, ut gravida diam risus a enim. Cras enim elit, consectetur sed ultricies sit amet, ultrices non enim. Vivamus sed enim eu mi semper molestie sit amet a mi. Suspendisse nunc lacus, iaculis non dui ut, dignissim lacinia elit. Maecenas bibendum nisi vitae nisi egestas vehicula at nec lacus. Nullam gravida sem et mi dictum, at tincidunt ex suscipit. Fusce rhoncus massa odio, vitae sagittis odio ornare sed. Vestibulum at felis mauris. Aenean nec lorem at enim gravida posuere in eget velit. Cras mollis mauris odio, vitae auctor dui tincidunt vitae. 
+
+					.form-site
+						.form-site__head Let's talk about your project
+						
+						.form-site__text Fill out the details in the form below and we will get back to you as soon as possible
+
+						.form-site__content
+							-
+								var fileds=[
+									{icon:'ic-person', icon_width:'29', icon_height:'30', value:'Jhon', type:'text'},
+									{icon:'ic-phone', icon_width:'29', icon_height:'30', placeholder:'Phone', type:'text'},
+									{icon:'ic-mail', icon_width:'32', icon_height:'22', placeholder:'E-mail', type:'email'},
+								]
+							each item in fileds
+								.form-site__field
+									input(type=item.type, value=item.value, placeholder=item.placeholder)
+
+									.form-site__icon
+										+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+
+							button.btn
+								span.btn__text
+									+svg('ic-mail-fly','ic-mail-fly', '35', '21')
+									span Send
+
+						.form-site__notice You can also call us:
+							br
+							a(href="tel:+000000000") 00-000-0000
+							| 
+							| or write an email:
+							| 
+							a(href="mailto:example@mail.com") example@mail.com
+
+					h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+					p Mauris consequat sapien at venenatis finibus. Aliquam erat volutpat. Integer vel rutrum augue, commodo tristique lorem. Cras nisl lectus, aliquet vel libero ultricies, accumsan feugiat nunc. Proin pretium eu nunc eget dignissim. Phasellus maximus diam a massa ornare ornare. Donec sollicitudin congue ullamcorper. Morbi accumsan viverra porta. Nulla consectetur, urna ac interdum lacinia, nisl tortor facilisis velit, sed mollis sem nisl quis ante. Morbi eleifend commodo sem vel volutpat. Suspendisse ac urna porttitor dui gravida tempus sit amet eu mi. Praesent et sem a nibh interdum tristique. Ut magna felis, feugiat eu mattis ac, ornare eget nibh. Cras vulputate enim at molestie dictum. Aenean efficitur ut ex vel interdum. Aenean non mauris viverra, pretium diam facilisis, rutrum diam.
+
+					h3 Quisque vel accumsan lectus. Mauris eget condimentum nisl?
+					p Morbi vel lacus euismod, aliquam nunc vitae, tempor quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna magna, suscipit eu est ac, pharetra gravida dui. Sed sed libero vitae dui elementum vehicula. In ut imperdiet diam. Maecenas lobortis dictum elit eu gravida. In lorem enim, mattis nec dui ut, commodo feugiat felis. Nunc in nisl et lacus suscipit efficitur at quis nisi. Ut ut pharetra tellus. Morbi eu nisi lorem. Curabitur id magna dignissim, aliquam augue eu, consequat urna. Duis at dolor orci. Morbi tincidunt molestie magna. Ut rutrum scelerisque placerat.
+
+					h3 Mauris tristique ipsum quis lectus accumsan, sit amet bibendum tellus placerat?
+					p Nam egestas vestibulum risus. Quisque interdum at neque fermentum vestibulum. Donec quis diam ut neque tincidunt pellentesque non et dui. Etiam orci nunc, volutpat et justo venenatis, feugiat tristique quam. Nam fermentum, dolor et mollis elementum, sem dui aliquam lectus, quis tempus dolor arcu vel diam. Praesent eleifend laoreet ligula laoreet bibendum. Ut maximus consequat laoreet. Maecenas elit odio, elementum vel blandit id, tincidunt vel velit.
+
+					h3 Suspendisse pharetra lectus dui, at suscipit dolor ultrices a. Mauris laoreet elit id mollis placerat?
+					p Morbi augue felis, tincidunt a eros ut, rhoncus volutpat tellus. Fusce gravida enim eget risus varius, vel rhoncus turpis tempor. Nulla ac iaculis metus. Nulla placerat, lorem ac vehicula vestibulum, erat ante venenatis lectus, sit amet venenatis quam diam in tellus. Praesent consequat lectus et dapibus consequat. Vivamus in dictum ligula, ut pellentesque leo. Nunc sapien augue, tincidunt id sagittis in, accumsan non ante. Donec felis neque, viverra id consequat eu, porttitor in quam. Pellentesque metus diam, vestibulum at velit placerat, ultrices venenatis odio. Proin luctus tincidunt justo ac porta. Aenean sed mattis dolor. Suspendisse justo nisl, finibus non urna vel, auctor elementum ligula.
+
+	section.form-bg-wrap
+		img.form-bg-wrap__triangle.form-bg-wrap__triangle_left(src="assets/img/triangle-left-up.png", alt="")
+		img.form-bg-wrap__triangle.form-bg-wrap__triangle_right(src="assets/img/triangle-right-up.png", alt="")
+
+		.container
+			.row
+				.col-12
+					.form-bg
+						.form-bg__title Want to know more?
+
+						.form-bg__text Fill out the details in the form below and we will get back to you as soon as possible
+
+						.form-bg__content
+							-
+								var fileds=[
+									{icon:'ic-person', icon_width:'20', icon_height:'21', placeholder:'Name', type:'text'},
+									{icon:'ic-phone', icon_width:'20', icon_height:'21', placeholder:'Phone', type:'text'},
+									{icon:'ic-mail', icon_width:'22', icon_height:'15', placeholder:'E-mail', type:'email'},
+								]
+							each item in fileds
+								.form-bg__field
+									input(type=item.type, value=item.value, placeholder=item.placeholder)
+
+									.form-bg__icon
+										+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+
+							button.btn
+								span.btn__text
+									+svg('ic-mail-fly','ic-mail-fly', '35', '21')
+									span Send

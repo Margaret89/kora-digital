@@ -158,6 +158,39 @@
 	}
 }
 
+.top-menu{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	&__item{
+		@include font(normal, 500, rem(24px), 1.25, #fff);
+		text-transform: uppercase;
+		text-decoration: none;
+		margin: 17px 15px;
+		position: relative;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__item.active,
+	&__item:hover{
+		color: $color-main;
+	}
+
+	&__item.active{text-decoration: underline;}
+
+	&__item:not(:last-child)::after{
+		content: '';
+		display: inline-block;
+		width: 3px;
+		height: 37px;
+		background: $color-main;
+		position: absolute;
+		@include top-center;
+		right: -15px;
+	}
+}
+
 html[dir='rtl']{
 	.top-block{
 		&__btn .btn:not(:last-child){
@@ -170,6 +203,13 @@ html[dir='rtl']{
 		&__item:not(:last-child){
 			margin-right: 0;
 			margin-left: 38px;
+		}
+	}
+
+	.top-menu{
+		&__item:not(:last-child)::after{
+			right: auto;
+			left: -15px;
 		}
 	}
 }
